@@ -1,0 +1,21 @@
+library(dplyr)
+setwd("C:/Users/1842s/Documents/Studies/SBU/Courses/AMS 597 StatisticalComputing/Project/f1dataset/")
+races <- read.csv("races.csv")
+circuits <- read.csv("circuits.csv")
+drivers <- read.csv("drivers.csv")
+constructors <- read.csv("constructors.csv")
+results <- read.csv("results.csv")
+qualifying <- read.csv("qualifying.csv")
+lap_times <- read.csv("lap_times.csv")
+pit_stops <- read.csv("pit_stops.csv")
+driver_standings <- read.csv("driver_standings.csv")
+constructor_standings <- read.csv("constructor_standings.csv")
+constructor_results <- read.csv("constructor_results.csv")
+status <- read.csv("status.csv")
+
+lr=full_join(lap_times,races,by="raceId",suffix = c("_l","_r"))
+lrrel=lr[lr$year>2010,]
+lrd=full_join(lrrel,drivers,by="driverId",suffix=c("_lr","_d"))
+lrdc=full_join(lrd,circuits,by="circuitId",suffix=c("_lrd","_c"))
+lrdcp=full_join(lrdc,pit_stops,by=c("raceId","driverId","lap"),suffix=c("_lrdc","_p"))
+lrdcp
