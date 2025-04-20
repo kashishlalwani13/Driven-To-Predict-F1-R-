@@ -1,0 +1,15 @@
+# R artifacts
+.Rhistory
+.RData
+.Rproj.user/
+
+# knitr cache + figures
+*/_cache/
+*/_files/
+
+# rendered output
+output/
+analysis/figures/
+
+# macOS
+.DS_Store
