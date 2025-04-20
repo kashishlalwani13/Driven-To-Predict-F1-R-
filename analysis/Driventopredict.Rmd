@@ -5,8 +5,24 @@ author: "Shubham Kishore Kale, Kashish Deepak Lalwani, Parth Satish Chavan, Nama
 output:
   pdf_document:
     latex_engine: xelatex
-
 ---
+
+```{r setup, include=FALSE}
+# install.packages("here") if needed
+library(here)
+library(dplyr)
+library(tidyr)
+library(lubridate)
+library(caret)
+library(xgboost)
+library(ggplot2)
+library(cluster)
+library(factoextra)
+library(binom)
+```
+
+
+
 ### Load Libraries
 
 ```{r, warning=FALSE, message=FALSE}
