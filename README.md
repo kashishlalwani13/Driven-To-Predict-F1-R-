@@ -23,17 +23,18 @@ To download the dataset locally (requires [Kaggle CLI](https://github.com/Kaggle
 ```bash
 kaggle datasets download rohanrao/formula-1-world-championship-1950-2020 \
   -p data/raw --unzip
-
+```
 
 📦 Installation
 
 In R, install the required packages:
-
+```{r}
 install.packages(c(
   "here", "dplyr", "tidyr", "lubridate", "caret", "xgboost", "Matrix",
   "ggplot2", "ggthemes", "cowplot", "cluster", "factoextra",
   "knitr", "kableExtra", "vcd", "binom", "readr"
 ))
+```
 
 👥 Authors
 
